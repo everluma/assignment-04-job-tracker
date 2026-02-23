@@ -52,9 +52,24 @@ jobs.forEach(job => {
         visibleCount++;
     } else if (job.status === filterType) {
         job.element.style.display = "block";
+        visibleCount++;
+    } else {
+        job.element.status.display = "none"; 
     }
-})
+});
+jobCountText.innerText = visibleCount + "jobs";
+
+
+// Empty State control 
+
+if (visibleCount === 0) {
+    emptyState.style.display = "block";
+} else {
+    emptyState.style.display = "none";
 }
+}
+
+// Works in Button 
 
 
 
