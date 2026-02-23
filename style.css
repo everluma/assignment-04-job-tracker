@@ -6,11 +6,19 @@ body {
 .whole-page {
     padding: 40px 80px;
 }
+
+
+/* Dasboar Section Style  */
 .dashboard-container {
     display: flex;
     gap: 15px;
     align-items: center;
     justify-content: left;
+   
+}
+
+.dashboard {
+    margin-bottom: 30px;
 }
 
 .dbd-card {
@@ -19,6 +27,71 @@ body {
     text-align: center;
     border-radius: 12px;
     box-shadow: 2px 2px 15px grey;
+}
+
+hr {
+    color: rgb(247, 245, 245);
+    background-color: gray;
+    margin-bottom: 30px;
+}
+
+/* Available Jobs Section  */
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.count {
+    color: gray;
+    font-size: 20px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    width: 110px;
+}
+
+/* job card  */
+
+.job-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.job-card {
+    width: 100%;
+    background-color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.job-card p {
+    font-size: 16px;
+    color: gray;
+    line-height: 1.6;
+}
+
+.job-card ul {
+    display: flex;
+    gap: 20px;
+    color: gray;
+}
+.job-card .discription {
+    color: rgb(48, 48, 48);
 }
 
 
@@ -30,11 +103,18 @@ body {
     .whole-page {
          padding: 10px 20px;
     }
+
+    /* Responsive for dashboard section  */
     .dashboard-container {
         flex-direction: column;
+    }
+    .dashboard h1 {
+        font-size: 28px;
     }
 
     .dbd-card {
         width: 100%;
     }
+
+    /* Responsive for Available jobs section  */
 }
