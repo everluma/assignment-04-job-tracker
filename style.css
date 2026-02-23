@@ -75,7 +75,19 @@ hr {
 .btn:active {
     transform: scale(0.95);
 }
+ /* Empty State  */
+ .empty-state {
+    text-align: center;
+    padding:40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px gray;
+    margin-bottom:30px;
+ }
 
+ .empty-state p {
+    color: gray;
+ }
 /* job card  */
 
 .job-card-container {
