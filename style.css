@@ -1,0 +1,40 @@
+body {
+    background-color:rgb(238, 237, 237);
+    box-sizing: border-box;
+}
+
+.whole-page {
+    padding: 40px 80px;
+}
+.dashboard-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: left;
+}
+
+.dbd-card {
+    background-color: white;
+    width: 35%;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 2px 2px 15px grey;
+}
+
+
+
+
+
+/* Mobile Responsive  */
+@media screen and (max-width:600px) {
+    .whole-page {
+         padding: 10px 20px;
+    }
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dbd-card {
+        width: 100%;
+    }
+}
