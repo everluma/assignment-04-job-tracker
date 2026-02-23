@@ -63,6 +63,13 @@ hr {
     background-color: white;
     width: 110px;
     text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgb(107, 107, 107);
+}
+.btn:hover {
+    background-color:blue ;
+    color: white;
+    font-weight: bold;
 }
 
 /* job card  */
@@ -79,6 +86,7 @@ hr {
     background-color: white;
     padding: 8px 14px;
     border-radius: 8px;
+    box-shadow: 0 0 15px rgb(90, 90, 90);
 }
 
 .job-card p {
