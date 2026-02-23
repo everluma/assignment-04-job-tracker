@@ -65,11 +65,15 @@ hr {
     text-align: center;
     cursor: pointer;
     box-shadow: 0 0 15px rgb(107, 107, 107);
+    transition: transform 0.1s ease;
 }
 .btn:hover {
     background-color:blue ;
     color: white;
     font-weight: bold;
+}
+.btn:active {
+    transform: scale(0.95);
 }
 
 /* job card  */
