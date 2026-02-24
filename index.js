@@ -4,6 +4,8 @@ const interviewDisplay = document.getElementById('interview-count');
 
 const rejectedDisplay = document.getElementById('rejected-count');
 
+const totalDisplay = document.getElementById('total-count');
+
 const jobCards = document.querySelectorAll('.job-card');
 
 const filterButtons = document.querySelectorAll('.btn');
@@ -37,8 +39,11 @@ function updateDashboard() {
     const interviewCount =jobs.filter(job => job.status === "Interview").length;
     const rejectedCount =jobs.filter(job => job.status === "Rejected").length;
 
+    const totalCount = jobs.length;
+
     interviewDisplay.innerText = interviewCount;
     rejectedDisplay.innerText = rejectedCount;
+    totalDisplay.innerText = totalCount;
 
 }
 
@@ -50,17 +55,14 @@ function renderJobs(filterType = "All") {
 let visibleCount = 0;
 
 jobs.forEach(job => {
-    if (filterType === "All") {
-        job.element.style.display = "block";
-        visibleCount++;
-    } else if (job.status === filterType) {
+    if (filterType === "All" || job.status === filterType) {
         job.element.style.display = "block";
         visibleCount++;
     } else {
         job.element.style.display = "none"; 
     }
 });
-jobCountText.innerText = visibleCount + "jobs";
+jobCountText.innerText = visibleCount + " jobs";
 
 
 // Empty State control 
@@ -75,6 +77,7 @@ if (visibleCount === 0) {
 // Works in Button 
 
 jobCards.forEach(card => {
+
     const interviewBtn = card.querySelector(".job-button button:nth-child(1)");
     const rejectedBtn = card.querySelector(".job-button button:nth-child(2)");
     const deleteBtn = card.querySelector(".job-button button:nth-child(3)");
@@ -113,7 +116,7 @@ jobCards.forEach(card => {
     });
 
 
-    // delete
+    // delete button
     if (deleteBtn) {
         deleteBtn.addEventListener('click', function () {
 
